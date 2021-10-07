@@ -28,3 +28,5 @@ spec:
       destination:
         name: in-cluster
         namespace: '{{ application.env }}'
+    syncPolicy:
+      automated: {}
