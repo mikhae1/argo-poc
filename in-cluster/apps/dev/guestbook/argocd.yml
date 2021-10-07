@@ -1,6 +1,6 @@
 application:
   name: guestbook
   env: dev
-  gitURL: https://github.com/argoproj/argocd-example-apps/
+  gitUrl: https://github.com/argoproj/argocd-example-apps/
   gitRev: HEAD
   gitPath: guestbook
