@@ -5,4 +5,4 @@ application:
   gitRev: HEAD
   gitPath: helm-guestbook
   helm:
-    valueFiles: values.yml
+    valueFile: helm-values.yml
