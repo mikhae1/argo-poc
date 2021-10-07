@@ -5,3 +5,4 @@ application:
   gitRev: HEAD
   gitPath: helm-guestbook
   helm:
+    valueFile:
