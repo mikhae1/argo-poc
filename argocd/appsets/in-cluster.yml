@@ -9,7 +9,7 @@ spec:
     - git:
         repoURL: https://github.com/mikhae1/argo-poc.git
         revision: main
-        directories:
+        files:
         - path: in-cluster/apps/**/argocd.yml
   template:
     metadata:
