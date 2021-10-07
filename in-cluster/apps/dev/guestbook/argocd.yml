@@ -1,8 +1,8 @@
 application:
   name: guestbook
   env: dev
-  gitUrl: https://github.com/argoproj/argocd-example-apps/
+  gitUrl: https://github.com/argoproj/argocd-example-apps.git
   gitRev: HEAD
-  gitPath: guestbook
+  gitPath: helm-guestbook
   helm:
     valueFiles: values.yml
