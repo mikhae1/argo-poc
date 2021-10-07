@@ -1,0 +1,29 @@
+# ds-cluster.yml
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+ name: ds-cluster
+ namespace: argocd
+spec:
+  generators:
+    - git:
+        repoURL: 'git@github.com:mikhae1/argo-poc.git'
+        revision: main
+        directories:
+        - path: in-cluster/apps/**/argocd.yml
+  template:
+    metadata:
+      name: 'ds-cluster-{{ application.name }}-{{ application.env }}'
+    spec:
+      # project is restricted to allowed repos and cluster resources
+      # project:  'in-cluster-project-{{ application.env }}'
+      source:
+        # developers will be able to customize applications details
+        repoURL: '{{ application.gitUrl }}'
+        targetRevision: '{{ application.gitRev }}'
+        path: '{{ application.gitPath }}'
+        helm: '{{ application.helm }}'
+        kustomize:  '{{ application.kustomize }}'
+      destination:
+        server: in-cluster
+        namespace: '{{ application.env }}'

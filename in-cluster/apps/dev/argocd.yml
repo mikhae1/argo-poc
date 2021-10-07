@@ -1,0 +1,6 @@
+application:
+  name: guestbook
+  env: dev
+  repoURL: https://github.com/argoproj/argocd-example-apps/
+  targetRevision: HEAD
+  path: guestbook
