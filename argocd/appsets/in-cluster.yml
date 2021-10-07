@@ -23,10 +23,12 @@ spec:
         repoURL: '{{ application.gitUrl }}'
         targetRevision: '{{ application.gitRev }}'
         path: '{{ application.gitPath }}'
-        # helm: '{{ application.helm }}'
+        helm:
+          valueFiles:
+            - '{{ application.helm.valueFile }}'
         # kustomize:  '{{ application.kustomize }}'
       destination:
         name: in-cluster
         namespace: '{{ application.env }}'
-    syncPolicy:
-      automated: {}
+      syncPolicy:
+        automated: {}
