@@ -1,6 +1,6 @@
 application:
   name: guestbook
-  env: dev
+  env: prod
   gitUrl: https://github.com/argoproj/argocd-example-apps.git
   gitRev: HEAD
   gitPath: helm-guestbook
