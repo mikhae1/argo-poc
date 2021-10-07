@@ -26,5 +26,5 @@ spec:
         # helm: '{{ application.helm }}'
         # kustomize:  '{{ application.kustomize }}'
       destination:
-        server: in-cluster
+        name: in-cluster
         namespace: '{{ application.env }}'
